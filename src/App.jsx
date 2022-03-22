@@ -1,6 +1,6 @@
 import './App.css';
 
-import { FiSearch } from 'react-icons/fi';
+import { ImSearch } from 'react-icons/im';
 
 function App() {
 	return (
@@ -10,10 +10,16 @@ function App() {
 			<div className='search-area'>
 				<input type='text' placeholder='Enter a ZipCode here...' />
 				<button className='btn-search'>
-					<FiSearch size={25} color='#fff' />
+					<ImSearch size={25} color='#fff' />
 				</button>
 			</div>
-			<div className='result-area'>resultado</div>
+			<div className='result-area'>
+				<h2>75501-3796</h2>
+				<span>Loy Shores Street</span>
+				<span>District: Canyon Road</span>
+				<span>North Clifton - ID</span>
+				<span>Country: Berkshire</span>
+			</div>
 		</div>
 	);
 }
