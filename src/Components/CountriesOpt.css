@@ -1,0 +1,38 @@
+.countries-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.countries-container p {
+	margin: 20px auto;
+
+	font-size: 1.2rem;
+	color: #fff;
+	text-align: center;
+}
+
+.countries-opt {
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: center;
+}
+
+.countries-opt img {
+	margin: 10px;
+	width: 40px;
+
+	border-radius: 5px;
+	box-shadow: 1px 2px 8px #0005;
+}
+
+.countries-opt input[type='radio'] {
+	visibility: hidden;
+}
+.countries-opt input[type='radio'] + label {
+	cursor: pointer;
+}
+
+.countries-opt input[type='radio']:checked + label > img {
+	box-shadow: 0px 0px 5px 5px #fff8;
+}

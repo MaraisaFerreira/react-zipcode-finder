@@ -5,6 +5,7 @@ import { useState } from 'react';
 import AppTitle from './Components/AppTitle';
 import ResultArea from './Components/ResultArea';
 import SearchArea from './Components/SearchArea';
+import CountriesOpt from './Components/CountriesOpt';
 
 function App() {
 	const [input, setInput] = useState('');
@@ -22,6 +23,7 @@ function App() {
 		<div className='main-container'>
 			<AppTitle />
 
+			<CountriesOpt />
 			<SearchArea
 				value={input}
 				handleChange={handleChange}
