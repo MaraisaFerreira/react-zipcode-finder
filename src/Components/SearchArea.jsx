@@ -2,8 +2,8 @@ import './SearchArea.css';
 
 import { ImSearch } from 'react-icons/im';
 
-const SearchArea = ({ value, handleChange }) => {
-	const urlBase = 'http://api.zippopotam.us/';
+const SearchArea = ({ value, handleChange, onFindZip }) => {
+	const urlBase = 'https://viacep.com.br/ws/';
 
 	const handleClick = async () => {
 		if (!value) {
@@ -12,9 +12,10 @@ const SearchArea = ({ value, handleChange }) => {
 		}
 
 		try {
-			fetch(urlBase + `BR/05414-000`)
+			console.log(urlBase + `${value}/json`);
+			fetch(urlBase + `${value}/json`)
 				.then((resp) => resp.json())
-				.then((json) => console.log(json));
+				.then((json) => onFindZip(json));
 		} catch (error) {
 			console.log('Not found');
 		}

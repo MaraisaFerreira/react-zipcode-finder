@@ -14,13 +14,21 @@ function App() {
 		setInput(value);
 	};
 
+	const handleFindZip = (data) => {
+		setZipCode(data);
+	};
+
 	return (
 		<div className='main-container'>
 			<AppTitle />
 
-			<SearchArea value={input} handleChange={handleChange} />
+			<SearchArea
+				value={input}
+				handleChange={handleChange}
+				onFindZip={handleFindZip}
+			/>
 
-			<ResultArea />
+			<ResultArea data={zipCode} />
 		</div>
 	);
 }
