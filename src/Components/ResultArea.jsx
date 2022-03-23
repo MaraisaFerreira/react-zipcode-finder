@@ -1,3 +1,5 @@
+import './ResultArea.css';
+
 const ResultArea = () => {
 	return (
 		<div className='result-area'>

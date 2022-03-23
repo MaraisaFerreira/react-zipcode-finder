@@ -14,3 +14,9 @@
 		transform: rotateX(0deg);
 	}
 }
+
+@media screen and (max-width: 550px) {
+	.app-title {
+		font-size: 4rem;
+	}
+}
