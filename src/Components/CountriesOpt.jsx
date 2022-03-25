@@ -1,14 +1,6 @@
 import './CountriesOpt.css';
 
-import { useState } from 'react';
-
-const CountriesOpt = () => {
-	const [isSelected, setIsSelected] = useState('br');
-
-	const handleChangeCountry = (newCountry) => {
-		setIsSelected(newCountry);
-	};
-
+const CountriesOpt = ({ countryOpt, changeCountry }) => {
 	return (
 		<div className='countries-container'>
 			<p>Select a country:</p>
@@ -18,8 +10,8 @@ const CountriesOpt = () => {
 					id='br'
 					name='countries'
 					value='br'
-					checked={isSelected === 'br'}
-					onChange={(e) => handleChangeCountry('br')}
+					checked={countryOpt === 'br'}
+					onChange={(e) => changeCountry('br')}
 				/>
 				<label htmlFor='br'>
 					<img src='src/assets/br.svg' alt='Brazil' title='Brazil' />
@@ -29,8 +21,8 @@ const CountriesOpt = () => {
 					id='us'
 					name='countries'
 					value='us'
-					checked={isSelected === 'us'}
-					onChange={(e) => handleChangeCountry('us')}
+					checked={countryOpt === 'us'}
+					onChange={(e) => changeCountry('us')}
 				/>
 				<label htmlFor='us'>
 					<img
@@ -44,8 +36,8 @@ const CountriesOpt = () => {
 					id='es'
 					name='countries'
 					value='es'
-					checked={isSelected === 'es'}
-					onChange={(e) => handleChangeCountry('es')}
+					checked={countryOpt === 'es'}
+					onChange={(e) => changeCountry('es')}
 				/>
 				<label htmlFor='es'>
 					<img src='src/assets/es.svg' alt='Spain' title='Spain' />
@@ -55,8 +47,8 @@ const CountriesOpt = () => {
 					id='de'
 					name='countries'
 					value='de'
-					checked={isSelected === 'de'}
-					onChange={(e) => handleChangeCountry('de')}
+					checked={countryOpt === 'de'}
+					onChange={(e) => changeCountry('de')}
 				/>
 				<label htmlFor='de'>
 					<img src='src/assets/de.svg' alt='Germany' title='Germany' />
@@ -66,8 +58,8 @@ const CountriesOpt = () => {
 					id='fr'
 					name='countries'
 					value='fr'
-					checked={isSelected === 'fr'}
-					onChange={(e) => handleChangeCountry('fr')}
+					checked={countryOpt === 'fr'}
+					onChange={(e) => changeCountry('fr')}
 				/>
 				<label htmlFor='fr'>
 					<img src='src/assets/fr.svg' alt='France' title='France' />
@@ -77,8 +69,8 @@ const CountriesOpt = () => {
 					id='gr'
 					name='countries'
 					value='gr'
-					checked={isSelected === 'gr'}
-					onChange={(e) => handleChangeCountry('gr')}
+					checked={countryOpt === 'gr'}
+					onChange={(e) => changeCountry('gr')}
 				/>
 				<label htmlFor='gr'>
 					<img src='src/assets/gr.svg' alt='Greece' title='Greece' />
@@ -88,8 +80,8 @@ const CountriesOpt = () => {
 					id='it'
 					name='countries'
 					value='it'
-					checked={isSelected === 'it'}
-					onChange={(e) => handleChangeCountry('it')}
+					checked={countryOpt === 'it'}
+					onChange={(e) => changeCountry('it')}
 				/>
 				<label htmlFor='it'>
 					<img src='src/assets/it.svg' alt='Italia' title='Italia' />
@@ -99,8 +91,8 @@ const CountriesOpt = () => {
 					id='pt'
 					name='countries'
 					value='pt'
-					checked={isSelected === 'pt'}
-					onChange={(e) => handleChangeCountry('pt')}
+					checked={countryOpt === 'pt'}
+					onChange={(e) => changeCountry('pt')}
 				/>
 				<label htmlFor='pt'>
 					<img src='src/assets/pt.svg' alt='Portugal' title='Portugal' />

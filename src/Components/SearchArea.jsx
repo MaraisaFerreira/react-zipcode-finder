@@ -2,9 +2,7 @@ import './SearchArea.css';
 
 import { ImSearch } from 'react-icons/im';
 
-const SearchArea = ({ value, handleChange, onFindZip }) => {
-	const urlBase = 'https://viacep.com.br/ws/';
-
+const SearchArea = ({ value, handleChange, onFindZip, countryOpt }) => {
 	const handleClick = async () => {
 		if (!value) {
 			alert('Digite um cep na área de busca...');
@@ -12,8 +10,14 @@ const SearchArea = ({ value, handleChange, onFindZip }) => {
 		}
 
 		try {
-			console.log(urlBase + `${value}/json`);
-			fetch(urlBase + `${value}/json`)
+			let url = '';
+			console.log(countryOpt);
+
+			countryOpt == 'br'
+				? (url = `https://viacep.com.br/ws/${value}/json`)
+				: (url = `http://api.zippopotam.us/${countryOpt}/${value}`);
+
+			fetch(url)
 				.then((resp) => resp.json())
 				.then((json) => onFindZip(json));
 		} catch (error) {
