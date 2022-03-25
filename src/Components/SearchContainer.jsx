@@ -22,6 +22,7 @@ const SearchContainer = () => {
 	};
 
 	const handleCountryOpt = (value) => {
+		setZipCode({});
 		setCountryOpt(value);
 	};
 
