@@ -66,17 +66,6 @@ const CountriesOpt = ({ countryOpt, changeCountry }) => {
 				</label>
 				<input
 					type='radio'
-					id='gr'
-					name='countries'
-					value='gr'
-					checked={countryOpt === 'gr'}
-					onChange={(e) => changeCountry('gr')}
-				/>
-				<label htmlFor='gr'>
-					<img src='src/assets/gr.svg' alt='Greece' title='Greece' />
-				</label>
-				<input
-					type='radio'
 					id='it'
 					name='countries'
 					value='it'
@@ -84,7 +73,7 @@ const CountriesOpt = ({ countryOpt, changeCountry }) => {
 					onChange={(e) => changeCountry('it')}
 				/>
 				<label htmlFor='it'>
-					<img src='src/assets/it.svg' alt='Italia' title='Italia' />
+					<img src='src/assets/it.svg' alt='Italy' title='Italy' />
 				</label>
 				<input
 					type='radio'
