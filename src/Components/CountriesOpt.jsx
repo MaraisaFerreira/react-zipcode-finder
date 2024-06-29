@@ -1,3 +1,11 @@
+import FlagBr from '../assets/imgs/br.svg';
+import FlagEs from '../assets/imgs/es.svg';
+import FlagFr from '../assets/imgs/fr.svg';
+import FlagGe from '../assets/imgs/ge.svg';
+import FlagUs from '../assets/imgs/us.svg';
+//import FlagGr from '../assets/imgs/gr.svg';
+import FlagIt from '../assets/imgs/it.svg';
+import FlagPt from '../assets/imgs/pt.svg';
 import './CountriesOpt.css';
 
 const CountriesOpt = ({ countryOpt, changeCountry }) => {
@@ -14,7 +22,7 @@ const CountriesOpt = ({ countryOpt, changeCountry }) => {
 					onChange={(e) => changeCountry('br')}
 				/>
 				<label htmlFor='br'>
-					<img src='src/assets/br.svg' alt='Brazil' title='Brazil' />
+					<img src={FlagBr} alt='Brazil' title='Brazil' />
 				</label>
 				<input
 					type='radio'
@@ -25,11 +33,7 @@ const CountriesOpt = ({ countryOpt, changeCountry }) => {
 					onChange={(e) => changeCountry('us')}
 				/>
 				<label htmlFor='us'>
-					<img
-						src='src/assets/us.svg'
-						alt='United States'
-						title='United States'
-					/>
+					<img src={FlagUs} alt='United States' title='United States' />
 				</label>
 				<input
 					type='radio'
@@ -40,7 +44,7 @@ const CountriesOpt = ({ countryOpt, changeCountry }) => {
 					onChange={(e) => changeCountry('es')}
 				/>
 				<label htmlFor='es'>
-					<img src='src/assets/es.svg' alt='Spain' title='Spain' />
+					<img src={FlagEs} alt='Spain' title='Spain' />
 				</label>
 				<input
 					type='radio'
@@ -51,7 +55,7 @@ const CountriesOpt = ({ countryOpt, changeCountry }) => {
 					onChange={(e) => changeCountry('ge')}
 				/>
 				<label htmlFor='ge'>
-					<img src='src/assets/ge.svg' alt='Germany' title='Germany' />
+					<img src={FlagGe} alt='Germany' title='Germany' />
 				</label>
 				<input
 					type='radio'
@@ -62,7 +66,7 @@ const CountriesOpt = ({ countryOpt, changeCountry }) => {
 					onChange={(e) => changeCountry('fr')}
 				/>
 				<label htmlFor='fr'>
-					<img src='src/assets/fr.svg' alt='France' title='France' />
+					<img src={FlagFr} alt='France' title='France' />
 				</label>
 				<input
 					type='radio'
@@ -73,7 +77,7 @@ const CountriesOpt = ({ countryOpt, changeCountry }) => {
 					onChange={(e) => changeCountry('it')}
 				/>
 				<label htmlFor='it'>
-					<img src='src/assets/it.svg' alt='Italy' title='Italy' />
+					<img src={FlagIt} alt='Italy' title='Italy' />
 				</label>
 				<input
 					type='radio'
@@ -84,7 +88,7 @@ const CountriesOpt = ({ countryOpt, changeCountry }) => {
 					onChange={(e) => changeCountry('pt')}
 				/>
 				<label htmlFor='pt'>
-					<img src='src/assets/pt.svg' alt='Portugal' title='Portugal' />
+					<img src={FlagPt} alt='Portugal' title='Portugal' />
 				</label>
 			</div>
 		</div>
